@@ -54,6 +54,330 @@ table {
 }
 
 html, body {
-    height: 100%;
+	height: 100%;
+	font-family:'Nanum Gothic', sans-serif;
+	// font-size:1.8rem;
 }
 
+// ------------ FONT IMPORT --------------------
+
+@import url('https://fonts.googleapis.com/css?family=Homemade+Apple&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Nanum+Gothic|Supermercado+One&display=swap');
+
+
+//  -------- VARIABLES -----------
+@main-color:  #49678B;
+@accent-color: #D4D5D4;
+@light-color: #C0BCC2;
+@header-font: 'Nanum Gothic', sans-serif;
+@h1-font: 'Homemade Apple', cursive;
+@center-text: justify-content:center;
+
+// ---------------- MIXINS ------------------
+
+.border-boxes(){
+	border: 2px solid @accent-color;
+}
+
+.center-text(){
+	text-align:center;
+}
+
+.section-theme(){
+	background-color:@light-color;
+	// display:flex;
+}
+
+.padding(){
+	padding:2%;
+}
+
+.boxes(){
+	padding:2%;
+	margin:1%;
+	text-align:center;
+	width:30%;
+	background-color:@accent-color;
+}
+
+//  --------ELEMENT SELECTORS ---------------
+body{
+	width:90%;
+	margin:4%;
+}
+
+h2, h3, h4, h5, h6{
+	font-family: @header-font;
+	// color:grey;
+}
+
+h1{
+	font-family:@h1-font;
+	font-size:2.5rem;
+}
+
+h2{
+	font-size:2rem;
+}
+
+h3, h4, h5{
+	font-size:1.5rem;
+}
+
+h6{
+	font-size:1.1rem;
+	color:@main-color;
+}
+
+p{
+	font-size:1em;
+	// color:blue;
+	font-family: @header-font;
+}
+
+
+// ------------NAV----------------------
+
+nav{
+	// .border-boxes();
+	display:flex;
+	justify-content:space-around;
+	// background-color:@accent-color;
+
+	a{
+		padding:1%;
+		width:25%;
+		background-color:@main-color;
+		.center-text();
+		text-decoration:none;
+		color:@accent-color;
+	} 
+
+	a:hover{
+		background-color:white;
+	}
+
+	// MEDIA QUERY
+}
+
+// ----------HERO IMG-----------------------
+.hero-img{
+	width:100%;
+	height: 40vh;
+
+	@media (max-width:500px){
+		height:20vh;
+	}
+}
+
+section{
+	.section-theme();
+	margin: 2% 0%;
+}
+
+
+// -------------HEADER----------------------
+#header{
+	display:flex;
+	align-items:center;
+	flex-wrap:wrap;
+	justify-content:space-around;
+
+	@media (max-width:500px){
+			justify-content:center;
+	}
+
+	img{
+		border-radius:50%;
+		width:20%;
+		padding:2%;
+
+		@media(max-width:500px){
+			width:35%;
+		}
+	}
+
+	div{
+		width:20%;
+
+
+		h1{
+			.padding();
+			// font-size:1.6rem;
+			@media (max-width:500px){
+				font-family:@header-font;
+			}
+		}
+
+		h2{
+			.padding();
+			font-size:1.4rem;
+		}
+	}
+
+	p{
+		.padding();
+		// margin-left:2%;
+		width:45%;
+		line-height: 1.25;
+
+		@media(max-width:500px){
+			display:none;
+		}
+	}
+} //-----------------header----------------------
+
+
+// --------------SKILLS-------------------------
+#skills{
+	display:flex;
+	align-items:center;
+	justify-content:center;
+	background-color:@main-color;
+
+	@media (max-width:500px){
+		width:100%;
+		justify-content:center;
+		padding:4%;
+	}
+
+	div{
+		width:30%;
+		flex-direction:column;
+		text-align:center;
+		justify-content:center;
+		padding:2% 4%;
+		background-color:@main-color;
+
+		@media (max-width:500px){
+			width:90%;
+			.padding();
+		}
+
+		h2{
+			color:white;
+			.padding();
+			font-family:@h1-font;
+
+			@media (max-width:500px){
+				font-family:@header-font;
+			}
+
+		}
+
+		ul{
+			background-color:white;
+			display:flex;
+			flex-direction:column;
+			align-items:center;
+		}
+
+		li{
+			border-bottom: .5px solid @accent-color;
+			width:100%;
+			padding:4%;
+
+			@media (max-width:500px){
+				padding:1%;
+			}
+		}
+	}
+
+	.skills-img{
+		width:70%;
+
+		@media (max-width:500px){
+			display:none;
+		}
+	}
+} //---------------closes skills---------------------------
+
+#work-history{
+	display:flex;
+	flex-direction:column;
+	background-color:white;
+
+
+	h2{
+		text-align:center;
+		padding:2% 0% 1% 0%;
+		font-family:@h1-font;
+		// background-color:blue;
+
+		@media (max-width:500px){
+			font-family: @header-font;
+		}
+	}
+	
+	.boxes{
+		display:flex;
+		flex-wrap:wrap;
+		flex-direction:row;
+		justify-content: space-between;
+
+		@media (max-width:500px){
+			// justify-content:center;
+			flex-direction:column;
+		}
+
+		.work{
+			.boxes();
+
+			@media (max-width:500px){
+				width:100%;
+				align-items:center;
+			}
+
+			h3{
+				margin:2%;
+
+				// @media (max-width:500px){
+				// 		font-size:1rem;
+				// 	}
+			}
+
+			h6{
+				margin-bottom:4%;
+
+				// @media (max-width:500px){
+				// 	font-size:.75rem;
+				// }
+			}
+
+			p{
+				background-color:white;
+				padding:3%;
+
+				@media (max-width:500px){
+					display:none;
+				}
+			}
+
+			button{
+				background-color:@main-color;
+				margin-top:4%;
+				padding:2% 6%;
+				color:white;
+			}
+		}
+	}
+
+} //--------------closes work-history-----------------
+
+
+#contact{
+	display:flex;
+	flex-direction:column;
+	line-height:2rem;
+	padding:3rem;
+	text-align:center;
+
+	h2{
+		font-family:@h1-font;
+
+		@media (max-width:500px){
+			font-family:@header-font;
+			margin-bottom:1rem;
+		}
+	}
+}
