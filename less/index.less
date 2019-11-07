@@ -92,6 +92,14 @@ html, body {
 	padding:2%;
 }
 
+.boxes(){
+	padding:2%;
+	margin:1%;
+	text-align:center;
+	width:30%;
+	background-color:@accent-color;
+}
+
 //  --------ELEMENT SELECTORS ---------------
 body{
 	width:90%;
@@ -112,8 +120,13 @@ h2{
 	font-size:2rem;
 }
 
-h3, h4, h5, h6{
-	font-size:2rem;
+h3, h4, h5{
+	font-size:1.5rem;
+}
+
+h6{
+	font-size:1.1rem;
+	color:@main-color;
 }
 
 p{
@@ -151,6 +164,10 @@ nav{
 .hero-img{
 	width:100%;
 	height: 40vh;
+
+	@media (max-width:500px){
+		height:20vh;
+	}
 }
 
 section{
@@ -166,18 +183,30 @@ section{
 	flex-wrap:wrap;
 	justify-content:space-around;
 
+	@media (max-width:500px){
+			justify-content:center;
+	}
+
 	img{
 		border-radius:50%;
-		width:15%;
+		width:20%;
 		padding:2%;
+
+		@media(max-width:500px){
+			width:35%;
+		}
 	}
 
 	div{
-		width:25%;
+		width:20%;
+
 
 		h1{
 			.padding();
 			// font-size:1.6rem;
+			@media (max-width:500px){
+				font-family:@header-font;
+			}
 		}
 
 		h2{
@@ -188,11 +217,15 @@ section{
 
 	p{
 		.padding();
-		margin-left:2%;
-		width:50%;
+		// margin-left:2%;
+		width:45%;
 		line-height: 1.25;
+
+		@media(max-width:500px){
+			display:none;
+		}
 	}
-}
+} //-----------------header----------------------
 
 
 // --------------SKILLS-------------------------
@@ -210,9 +243,20 @@ section{
 		padding:2% 4%;
 		background-color:@main-color;
 
+		@media (max-width:500px){
+			width:60%;
+			.padding();
+		}
+
 		h2{
 			color:white;
 			.padding();
+			font-family:@h1-font;
+
+			@media (max-width:500px){
+				font-family:@header-font;
+			}
+
 		}
 
 		ul{
@@ -231,5 +275,94 @@ section{
 
 	.skills-img{
 		width:70%;
+
+		@media (max-width:500px){
+			display:none;
+		}
+	}
+} //---------------closes skills---------------------------
+
+#work-history{
+	display:flex;
+	flex-direction:column;
+	background-color:white;
+
+
+	h2{
+		text-align:center;
+		padding:2% 0% 1% 0%;
+		font-family:@h1-font;
+		// background-color:blue;
+
+		@media (max-width:500px){
+			font-family: @header-font;
+		}
+	}
+	
+	.boxes{
+		display:flex;
+		flex-wrap:wrap;
+		flex-direction:row;
+		justify-content: space-between;
+
+		@media (max-width:500px){
+			align-items:center;
+		}
+
+		.work{
+			.boxes();
+
+			h3{
+				margin:2%;
+
+				@media (max-width:500px){
+						font-size:1rem;
+					}
+			}
+
+			h6{
+				margin-bottom:4%;
+
+				@media (max-width:500px){
+					font-size:.75rem;
+				}
+			}
+
+			p{
+				background-color:white;
+				padding:3%;
+
+				@media (max-width:500px){
+					display:none;
+					background-color:blue;
+				}
+			}
+
+			button{
+				background-color:@main-color;
+				margin-top:4%;
+				padding:2% 6%;
+				color:white;
+			}
+		}
+	}
+
+} //--------------closes work-history-----------------
+
+
+#contact{
+	display:flex;
+	flex-direction:column;
+	line-height:2rem;
+	padding:3rem;
+	text-align:center;
+
+	h2{
+		font-family:@h1-font;
+
+		@media (max-width:500px){
+			font-family:@header-font;
+			margin-bottom:1rem;
+		}
 	}
 }
