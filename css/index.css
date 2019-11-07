@@ -136,11 +136,11 @@ body {
   font-family: 'Nanum Gothic', sans-serif;
 }
 @font-face {
-  font-family: 'Staatliches';
+  font-family: 'Homemade Apple';
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: local('Staatliches Regular'), local('Staatliches-Regular'), url(https://fonts.gstatic.com/s/staatliches/v3/HI_OiY8KO6hCsQSoAPmtMYebvpU.ttf) format('truetype');
+  src: local('Homemade Apple Regular'), local('HomemadeApple-Regular'), url(https://fonts.gstatic.com/s/homemadeapple/v10/Qw3EZQFXECDrI2q789EKQZJob0x6XH0.ttf) format('truetype');
 }
 @font-face {
   font-family: 'Nanum Gothic';
@@ -161,19 +161,19 @@ body {
   width: 90%;
   margin: 4%;
 }
-h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-  font-family: 'Staatliches', cursive;
+  font-family: 'Nanum Gothic', sans-serif;
 }
 h1 {
-  font-size: 3rem;
+  font-family: 'Homemade Apple', cursive;
+  font-size: 2.5rem;
 }
 h2 {
-  font-size: 2.5rem;
+  font-size: 2rem;
 }
 h3,
 h4,
@@ -210,41 +210,60 @@ section {
 }
 #header {
   display: flex;
-  align-content: column;
+  align-items: center;
   flex-wrap: wrap;
+  justify-content: space-around;
 }
 #header img {
   border-radius: 50%;
-  width: 20%;
-  margin: 2%;
+  width: 15%;
+  padding: 2%;
+}
+#header div {
+  width: 25%;
 }
 #header div h1 {
   padding: 2%;
-  width: 40%;
 }
 #header div h2 {
   padding: 2%;
-  width: 40%;
+  font-size: 1.4rem;
 }
 #header p {
   padding: 2%;
-  width: 80%;
+  margin-left: 2%;
+  width: 50%;
+  line-height: 1.25;
 }
 #skills {
   display: flex;
-  align-content: column;
-  flex-wrap: wrap;
-  text-align: center;
-}
-#skills h2 {
-  width: 100%;
+  align-items: center;
+  justify-content: center;
   background-color: #49678B;
-  color: #C0BCC2;
 }
-#skills ul {
+#skills div {
+  width: 30%;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  padding: 2% 4%;
+  background-color: #49678B;
+}
+#skills div h2 {
+  color: white;
+  padding: 2%;
+}
+#skills div ul {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#skills div li {
+  border-bottom: 0.5px solid #D4D5D4;
   width: 100%;
-  background-color: #D4D5D4;
+  padding: 4%;
 }
-#skills li {
-  padding: 1rem;
+#skills .skills-img {
+  width: 70%;
 }
